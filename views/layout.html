@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Zarlo</title>
+  <meta name="description" content="">
+  <meta name="author" content="zarlo">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+
+
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+
+        {% block content %}
+        {% endblock  %}
+
+    </div>
+
+    <br><br>
+    <div class="container">
+
+    <p style="text-align: center;">
+        Page was generated in {{ load_time }} seconds<br>
+        Powered by <a href="https://github.com/zarlo/not-quite-static">not quite static</a>
+    </p>
+
+    </div>
+
+</body>
