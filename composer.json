@@ -1,20 +1,34 @@
 {
-    "name": "zarlo/not-quite-static",
-    "description": "a not quite ststic site",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "nqs\\": "src/core/"
+    "name": "sculpin/blog-skeleton",
+    "description": "A Skeleton for a Sculpin Based Blog",
+    "type": "sculpin-skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dragonfly Development Inc.",
+            "email": "info@dflydev.com",
+            "homepage": "http://dflydev.com"
+        },
+        {
+            "name": "Beau Simensen",
+            "email": "beau@dflydev.com",
+            "homepage": "http://beausimensen.com"
         }
-    },
+    ],
     "require": {
-        "twig/twig": "^2.7",
-        "symfony/yaml": "^4.3",
-        "erusev/parsedown": "^1.7",
-        "nikic/fast-route": "^1.3"
+        "sculpin/sculpin": "^3.0"
     },
     "scripts": {
-        "start": "php -S 0.0.0.0:8080 -t public",
-        "test": "phpunit"
+        "publish": [
+            "./publish.sh"
+        ],
+        "sculpin-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "./vendor/bin/sculpin generate --watch --server"
+        ],
+        "yarn-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "yarn encore dev --watch"
+        ]
     }
 }

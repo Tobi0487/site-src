@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="{{ site.url }}/asset/css/materialize.min.css"  media="screen,projection"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+        <nav class="light-blue lighten-1">
+          <div class="container">
+            <div class="nav-wrapper">
+                <a href="{{ site.url }}/" class="brand-logo">IT Enthusiasts</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{{ site.url }}/Members">Members</a></li>
+                <li><a href="{{ site.url }}/Reports">Reports</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container">
+        <br>
+        {% block content_wrapper %}
+        {% block content %}
+        {% endblock  %}
+        {% endblock  %}
+        </div>
+
+      <script type="text/javascript" src="{{ site.url }}/asset/js/materialize.min.js"></script>
+    </body>
+  </html>
