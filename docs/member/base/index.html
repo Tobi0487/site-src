@@ -1,24 +1,31 @@
   <!DOCTYPE html>
   <html>
     <head>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="https://rmit-it-enthusiasts.github.io/site-src/asset/css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/asset/css/materialize.min.css"  media="screen,projection"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
-
         <nav class="light-blue lighten-1">
-          <div class="container">
-            <div class="nav-wrapper">
-                <a href="https://rmit-it-enthusiasts.github.io/site-src/" class="brand-logo">IT Enthusiasts</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="https://rmit-it-enthusiasts.github.io/site-src/members">Members</a></li>
-                <li><a href="https://rmit-it-enthusiasts.github.io/site-src/reports">Reports</a></li>
-                </ul>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo">IT Enthusiasts</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/members">Members</a></li>
+                    <li><a id="nav-dropdown" href="#!" data-target="nav-dropdown-content">Assessments<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <ul id='nav-dropdown-content' class='dropdown-content'>
+                        <li><a href="/assessment/two">Assessment 2: Team Project</a></li>
+
+                    </ul>
+                    </ul>
+                </div>
             </div>
-          </div>
+
+
+
         </nav>
 
         <div class="container">
@@ -34,6 +41,13 @@
     </div>
 </div>                </div>
 
-      <script type="text/javascript" src="https://rmit-it-enthusiasts.github.io/site-src/asset/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js" integrity="sha256-W9FML0cw6SfScX3k0Z8iTWhaZGSEUrR3R3KWfRA6lnI=" crossorigin="anonymous"></script>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                $("#nav-dropdown").dropdown({hover: true});
+            });
+
+        </script>
     </body>
   </html>

@@ -1,4 +1,5 @@
-
+sculpin:
+  output_dir: docs
 sculpin_content_types:
     posts:
         enabled: false
